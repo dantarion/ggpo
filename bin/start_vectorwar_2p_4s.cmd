@@ -7,9 +7,9 @@ REM Controls: Arrows to move
 REM           Press 'D' to fire
 REM           Press 'P' to show performance monitor
 REM           Shift to strafe
-
+pushd ..\build\VS2019\x64\Debug
 del *.log
-set vw=..\samples\vectorwar\debug\vectorwar.exe
+set vw=VectorWar.exe
 
 :: no spectators
 ::start %vw% 7000 2 local 127.0.0.1:7001
