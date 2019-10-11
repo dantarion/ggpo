@@ -708,7 +708,31 @@ UdpProtocol::SetDisconnectTimeout(int timeout)
 void
 UdpProtocol::SetDisconnectNotifyStart(int timeout)
 {
-   _disconnect_notify_start = timeout;
+	_disconnect_notify_start = timeout;
+}
+
+void
+UdpProtocol::SetSendLatency(int latency)
+{
+	_send_latency = latency;
+}
+
+int
+UdpProtocol::GetSendLatency()
+{
+	return _send_latency;
+}
+
+void
+UdpProtocol::SetOopChance(int percent)
+{
+	_oop_percent = percent;
+}
+
+int
+UdpProtocol::GetOopChance()
+{
+	return _oop_percent;
 }
 
 void

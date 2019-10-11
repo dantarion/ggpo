@@ -83,6 +83,12 @@ public:
    void SetDisconnectTimeout(int timeout);
    void SetDisconnectNotifyStart(int timeout);
 
+   void SetSendLatency(int latency);
+   int GetSendLatency();
+
+   void SetOopChance(int percent);
+   int GetOopChance();
+
 protected:
    enum State {
       Syncing,
