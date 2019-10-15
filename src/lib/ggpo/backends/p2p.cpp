@@ -1,6 +1,8 @@
 /* -----------------------------------------------------------------------
  * GGPO.net (http://ggpo.net)  -  Copyright 2009 GroundStorm Studios, LLC.
- * Use of this software is prohibited unless accompanied by a license.
+ *
+ * Use of this software is governed by the MIT license that can be found
+ * in the LICENSE file.
  */
 
 #include "p2p.h"
@@ -524,7 +526,7 @@ Peer2PeerBackend::GetNetworkStats(GGPONetworkStats *stats, GGPOPlayerHandle play
       return result;
    }
 
-   memset(stats, 0, sizeof stats);
+   memset(stats, 0, sizeof *stats);
    _endpoints[queue].GetNetworkStats(stats);
 
    return GGPO_OK;

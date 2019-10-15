@@ -1,6 +1,8 @@
 /* -----------------------------------------------------------------------
  * GGPO.net (http://ggpo.net)  -  Copyright 2009 GroundStorm Studios, LLC.
- * Use of this software is prohibited unless accompanied by a license.
+ *
+ * Use of this software is governed by the MIT license that can be found
+ * in the LICENSE file.
  */
 
 #include "sync.h"
@@ -57,7 +59,7 @@ Sync::AddLocalInput(int queue, GameInput &input)
 {
    int frames_behind = _framecount - _last_confirmed_frame; 
    if (_framecount >= _max_prediction_frames && frames_behind >= _max_prediction_frames) {
-      Log("Rejecting input from emualtor: reached prediction barrier.\n");
+      Log("Rejecting input from emulator: reached prediction barrier.\n");
       return false;
    }
 
